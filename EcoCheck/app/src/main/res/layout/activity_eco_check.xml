@@ -3,9 +3,121 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".EcoCheckActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".EcoCheckActivity"
+    android:background="#B0BEC5"
+    >
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <!--this is the main text view for the main screen -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="סקר מקדים"
+        android:id="@+id/PreliminarySurvey"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#D50000" />
+    <!-- button of create new factory -->
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="מפעל חדש"
+        android:id="@+id/NewFactory"
+        android:layout_below="@+id/PreliminarySurvey"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:background="#ffcddfe8"
+        android:clickable="true" />
+
+    <!-- button to find factory -->
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="חפש מפעל"
+        android:id="@+id/findFactory"
+        android:background="#ffcddfe8"
+        android:clickable="true"
+        android:layout_below="@+id/NewFactory"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
+
+    <!--button to find Survey -->
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="חפש סקר"
+        android:id="@+id/findSurvey"
+        android:background="#ffcddfe8"
+        android:clickable="true"
+        android:layout_below="@+id/findFactory"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
+
+    <!--button of the list reports -->
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="רשימת דוחות"
+        android:id="@+id/ListReports"
+        android:background="#ffcddfe8"
+        android:clickable="true"
+        android:layout_below="@+id/findSurvey"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
+
+    <!-- tools button -->
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="כלים"
+        android:id="@+id/tools"
+        android:background="#ffcddfe8"
+        android:clickable="true"
+        android:layout_below="@+id/ListReports"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
+
+    <!--Afik button -->
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="אפיק"
+        android:id="@+id/afik"
+        android:background="#ffcddfe8"
+        android:clickable="true"
+        android:layout_below="@+id/tools"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
+
+    <!--Survey to send button -->
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="סקרים לשליחה"
+        android:id="@+id/surveyToSend"
+        android:background="#ffcddfe8"
+        android:clickable="true"
+        android:layout_below="@+id/afik"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
+
+    <!-- setting button -->
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="הגדרות"
+        android:id="@+id/setting"
+        android:layout_alignBottom="@+id/NewFactory"
+        android:background="#ffcddfe8"
+        android:clickable="true"
+        android:layout_toLeftOf="@+id/PreliminarySurvey"
+        android:layout_toStartOf="@+id/PreliminarySurvey" />>
 
 </RelativeLayout>
