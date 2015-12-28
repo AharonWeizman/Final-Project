@@ -1,18 +1,41 @@
 package org.ecocheck.ecocheck;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
-public class EcoCheckActivity extends ActionBarActivity {
+public class EcoCheckActivity extends ActionBarActivity
+{
+    private  static Button button_Add_Factory;//the button that refer to add factory
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eco_check);
+        onClickButtonListener();//call the method onClickButtonListener
     }
+
+    //method that on butoon click open new activity of AddNewFactory
+    public void onClickButtonListener()
+    {
+        button_Add_Factory=(Button) findViewById(R.id.NewFactory);//intance for NewFactory Button in activity_eco_Check.xml
+        button_Add_Factory.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v)
+                    {
+                        Intent intent=new Intent("org.ecocheck.ecocheck.AddNewFactory");//take the context from activity_add_new_factory.xml
+                        startActivity(intent);
+                    }
+                }
+        );
+    }
+
 
 
     @Override
