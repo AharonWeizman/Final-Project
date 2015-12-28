@@ -1,4 +1,5 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -6,7 +7,9 @@
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".EcoCheckActivity"
     android:background="#B0BEC5"
     >
-
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
     <!--this is the main text view for the main screen -->
     <TextView
         android:layout_width="wrap_content"
@@ -119,5 +122,5 @@
         android:clickable="true"
         android:layout_toLeftOf="@+id/PreliminarySurvey"
         android:layout_toStartOf="@+id/PreliminarySurvey" />>
-
-</RelativeLayout>
+  </RelativeLayout>
+</ScrollView>
