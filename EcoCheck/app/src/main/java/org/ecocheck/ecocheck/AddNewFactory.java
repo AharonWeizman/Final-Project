@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import org.ecocheck.ecocheck.database.DataBaseFactory;
+import org.ecocheck.ecocheck.dto.Factory;
+
 public class AddNewFactory extends AppCompatActivity
 {
     DataBaseFactory dataBaseFactory;
@@ -43,26 +46,36 @@ public class AddNewFactory extends AppCompatActivity
     //method to add data to the sqlLite DataBase on click
     public void AddData()
     {
-        btnAddFactory.setOnClickListener
-                (
-                        new View.OnClickListener()
-                        {
-                            @Override
-                            public void onClick(View v)//on click call to insertFactoryData method from DataBaseFactory class
-                            {
-                                boolean isInserted = dataBaseFactory.insertFactoryData(editAfik.getText().toString(),
-                                        editFactory.getText().toString(),
-                                        editBranch.getText().toString(), editCity.getText().toString(),editAddress.getText().toString(),
-                                        editPhone.getText().toString(),editFax.getText().toString(),editContactPerson.getText().toString(),
-                                        editMailingAddress.getText().toString(),editEmployeesNumber.getText().toString(),
-                                        editInspector.getText().toString());
-                                if(isInserted ==true)
-                                    Toast.makeText(AddNewFactory.this, "Data Inserted", Toast.LENGTH_LONG).show();
-                                else
-                                    Toast.makeText(AddNewFactory.this,"Data not Inserted",Toast.LENGTH_LONG).show();
-                            }
-                        }
-                );
+        btnAddFactory.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)// on click call to insertFactoryData
+            // method from DataBaseFactory class
+            {
+                Factory factory = new Factory();
+                factory.setId(Integer.parseInt(editAfik.getText().toString()));
+                factory.setFactory(editFactory.getText().toString());
+                factory.setBranch(editBranch.getText().toString());
+                factory.setCity(editCity.getText().toString());
+                factory.setAddress(editAddress.getText().toString());
+                factory.setPhone(editPhone.getText().toString());
+                factory.setFax(editFax.getText().toString());
+                factory.setContact(editContactPerson.getText().toString());
+                factory.setMailing_address(editMailingAddress.getText()
+                        .toString());
+                factory.setEmployee_number(editEmployeesNumber.getText()
+                        .toString());
+                factory.setInspector(editInspector.getText().toString());
+
+                boolean isInserted = dataBaseFactory.insertFactoryData(factory);
+                if (isInserted == true)
+                    Toast.makeText(AddNewFactory.this, "Data Inserted",
+                            Toast.LENGTH_LONG).show();
+                else
+                    Toast.makeText(AddNewFactory.this, "Data not Inserted",
+                            Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     public void showMassage(String title, String message)
@@ -75,6 +88,7 @@ public class AddNewFactory extends AppCompatActivity
         builder.show();//show our dialog
     }
 
+    //enable option menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
