@@ -1,6 +1,8 @@
 package org.ecocheck.ecocheck;
 
 import android.app.AlertDialog;
+import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -53,27 +55,44 @@ public class AddNewFactory extends AppCompatActivity
             // method from DataBaseFactory class
             {
                 Factory factory = new Factory();
-                factory.setId(Integer.parseInt(editAfik.getText().toString()));
-                factory.setFactory(editFactory.getText().toString());
-                factory.setBranch(editBranch.getText().toString());
-                factory.setCity(editCity.getText().toString());
-                factory.setAddress(editAddress.getText().toString());
-                factory.setPhone(editPhone.getText().toString());
-                factory.setFax(editFax.getText().toString());
-                factory.setContact(editContactPerson.getText().toString());
-                factory.setMailing_address(editMailingAddress.getText()
-                        .toString());
-                factory.setEmployee_number(editEmployeesNumber.getText()
-                        .toString());
-                factory.setInspector(editInspector.getText().toString());
 
-                boolean isInserted = dataBaseFactory.insertFactoryData(factory);
-                if (isInserted == true)
-                    Toast.makeText(AddNewFactory.this, "Data Inserted",
-                            Toast.LENGTH_LONG).show();
-                else
-                    Toast.makeText(AddNewFactory.this, "Data not Inserted",
-                            Toast.LENGTH_LONG).show();
+                //throw error if in the Afik number field in activity.Add_new_factory is empty
+                if(isEmptyAfikNumber(editAfik))
+                {
+                    editAfik.setError("שדה זה הינו חובה");
+                }
+
+                //throw error if in the the factory name field in activity.Add_new_factory is empty
+                if(isEmptyFactoryName(editFactory))
+                {
+                    editFactory.setError("שדה זה הינו חובה");
+                }
+
+                // check if the fields are like demand
+                if (!isEmptyAfikNumber(editAfik)&& !isEmptyFactoryName(editFactory))
+                {
+                    factory.setId(Integer.parseInt(editAfik.getText().toString()));
+                    factory.setFactory(editFactory.getText().toString());
+                    factory.setBranch(editBranch.getText().toString());
+                    factory.setCity(editCity.getText().toString());
+                    factory.setAddress(editAddress.getText().toString());
+                    factory.setPhone(editPhone.getText().toString());
+                    factory.setFax(editFax.getText().toString());
+                    factory.setContact(editContactPerson.getText().toString());
+                    factory.setMailing_address(editMailingAddress.getText()
+                            .toString());
+                    factory.setEmployee_number(editEmployeesNumber.getText()
+                            .toString());
+                    factory.setInspector(editInspector.getText().toString());
+
+                    boolean isInserted = dataBaseFactory.insertFactoryData(factory);
+                    if (isInserted == true)
+                        Toast.makeText(AddNewFactory.this, "פרטי המפעל הוזנו בהצלחה",
+                                Toast.LENGTH_LONG).show();
+                    else
+                        Toast.makeText(AddNewFactory.this, "פרטי המפעל לא נקלטו. במערכת קיים מספר אפיק דומה",
+                                Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
@@ -111,6 +130,25 @@ public class AddNewFactory extends AppCompatActivity
             return true;
         }
 
+        // case the user click the visit factory in the option menu it will open activity_visit_factory.xml
+        if(id== R.id.visit_factory)
+        {
+            Intent intent = new Intent("org.ecocheck.ecocheck.VisitFactory");//take the context from activity_Materials.xml
+            startActivity(intent);
+        }
+
         return super.onOptionsItemSelected(item);
+
+    }
+
+    private boolean isEmptyAfikNumber(EditText afik)
+    {
+        // return true if afik number is empty
+        return afik.getText().toString().trim().length() == 0;
+    }
+
+    private boolean isEmptyFactoryName(EditText FactoryName)
+    {
+        return FactoryName.getText().toString().trim().length() == 0;
     }
 }
