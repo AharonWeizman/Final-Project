@@ -1,12 +1,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".EcoCheckActivity">
+
     <item
         android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"
-        app:showAsAction="never"
-    />
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/search_material"
@@ -15,10 +15,25 @@
         app:showAsAction="never"
         />
 
+
     <item
-        android:id="@+id/recommendations"
-        android:title="@string/recommendations"
+        android:id="@+id/visit_factory"
+        android:title="@string/visit_factory"
         android:orderInCategory="100"
         app:showAsAction="never"
         />
+    <item
+        android:id="@+id/factory_process"
+        android:title="@string/factory_process"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/factory_recommendations"
+        android:title="@string/factory_recommendations"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        />
+
 </menu>
