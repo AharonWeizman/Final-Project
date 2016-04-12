@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">EcoCheck</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">הגדרות</string>
+    <string name="search_material">חיפוש חומר</string>
+    <string name="visit_factory">ביקורים</string>
+    <string name="factory_process">factory process</string>
+    <string name="factory_recommendations">המלצות</string>
+
 </resources>
