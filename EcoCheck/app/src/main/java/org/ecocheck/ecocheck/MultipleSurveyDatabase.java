@@ -8,8 +8,8 @@ import android.widget.CheckBox;
 import android.widget.Toast;
 
 import org.ecocheck.ecocheck.app.App;
-import org.ecocheck.ecocheck.dto.Recommendation;
-import org.ecocheck.ecocheck.dto.Visits;
+import org.ecocheck.ecocheck.dto.*;
+import org.ecocheck.ecocheck.dto.Process;
 
 import java.util.ArrayList;
 
@@ -22,7 +22,7 @@ public class MultipleSurveyDatabase  extends SQLiteOpenHelper
     //version number to upgrade database version
     //each time if you Add, Edit table, you need to change the
     //version number.
-    private static final int DATABASE_VERSION = 10;
+    private static final int DATABASE_VERSION = 43;
 
     // Database Name
     private static final String DATABASE_NAME = "surveyDBMultiTbl.db";
@@ -42,6 +42,8 @@ public class MultipleSurveyDatabase  extends SQLiteOpenHelper
         db.execSQL(RecommendationDatabase.createTable());
         // create the data base we create in VisitDataBase class
         db.execSQL(VisitDataBase.createTable());
+
+        db.execSQL(ProcesDatabase.createTable());
     }
 
     @Override
@@ -54,6 +56,7 @@ public class MultipleSurveyDatabase  extends SQLiteOpenHelper
         // create from Visits class
         db.execSQL("DROP TABLE IF EXISTS " + Visits.TABLE);
         db.execSQL("DROP TABLE IF EXISTS " + Recommendation.TABLE);
+        db.execSQL("DROP TABLE IF EXISTS " + Process.TABLE);
 
         onCreate(db);
     }
@@ -256,7 +259,8 @@ public class MultipleSurveyDatabase  extends SQLiteOpenHelper
         ArrayList<Visits> visitses = new ArrayList<Visits>();
 
         if (cursor.moveToFirst()) {
-            do {
+            do
+            {
                 //make factory object
                 Visits visits = new Visits();
                 //set the values
