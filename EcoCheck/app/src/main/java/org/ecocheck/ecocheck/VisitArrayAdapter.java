@@ -72,11 +72,11 @@ public class VisitArrayAdapter extends ArrayAdapter<Visits>
         {
             if (convertView == null)
             {
-                // vi = inflater.inflate(R.layout.list_item, null);// to show need to vreate visit layouyt
+                vi = inflater.inflate(R.layout.list_item_survey, null);
                 holder = new ViewHolder();
 
-                //   holder.Visits_ReportNumber = (TextView) vi
-                //   .findViewById(R.id.factory_name);// to show need to vreate visit layouyt
+                holder.Visits_ReportNumber = (TextView) vi
+                        .findViewById(R.id.reports_numbers);
 
                 vi.setTag(holder);
             }
@@ -85,7 +85,7 @@ public class VisitArrayAdapter extends ArrayAdapter<Visits>
                 holder = (ViewHolder) vi.getTag();
             }
 
-            holder.Visits_ReportNumber.setText(lVisits.get(position).getFactory());
+            holder.Visits_ReportNumber.setText(lVisits.get(position).getFactory());// the commend that show the name of the factory as head line
 
         }
         catch (Exception e)
