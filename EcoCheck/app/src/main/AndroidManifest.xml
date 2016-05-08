@@ -3,6 +3,7 @@
     package="org.ecocheck.ecocheck">
 
     <application
+        android:name=".app.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -68,6 +69,64 @@
             </intent-filter>
         </activity>
 
+        <!-- activity for VisitFactory -->
+        <activity android:name=".VisitFactory">
+            <intent-filter>
+                <action android:name="org.ecocheck.ecocheck.VisitFactory" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- activity for factoryProcess -->
+        <activity android:name=".FactoryProcess">
+            <intent-filter>
+                <action android:name="org.ecocheck.ecocheck.FactoryProcess" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- activity for factoryRecommendations -->
+        <activity android:name=".FactoryRecommendation">
+            <intent-filter>
+                <action android:name="org.ecocheck.ecocheck.FactoryRecommendation" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- activity for ViewAllSurvey -->
+        <activity android:name=".ViewAllSurvey">
+            <intent-filter>
+                <action android:name="org.ecocheck.ecocheck.ViewAllSurvey" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- activity for FindSurvey -->
+        <activity android:name=".FindSurvey">
+            <intent-filter>
+                <action android:name="org.ecocheck.ecocheck.FindSurvey" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".showSurvey.showVisitSurvey">
+            <intent-filter>
+                <action android:name="org.ecocheck.ecocheck.showSurvey.showVisitSurvey" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".showSurvey.showRecommendationSurvey">
+            <intent-filter>
+                <action android:name="org.ecocheck.ecocheck.showSurvey.showRecommendationSurvey" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
