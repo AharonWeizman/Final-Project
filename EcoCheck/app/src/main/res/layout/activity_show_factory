@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ShowFactory.showFactory"
+    android:fillViewport="false">
+    <!--
+   moved
+   android:paddingLeft="@dimen/activity_horizontal_margin"
+   android:paddingRight="@dimen/activity_horizontal_margin"
+   from scrollview to relativelayout so when creating the pdf it will
+   have same margins as the view
+   -->
+    <RelativeLayout
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="הוסף מפעל"
+            android:id="@+id/AddFactoryPage"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#D50000" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="מספר אפיק"
+            android:id="@+id/AfikNumber"
+            android:layout_below="@+id/AddFactoryPage"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="מפעל"
+            android:id="@+id/Factory"
+            android:layout_below="@+id/AfikNumber"
+            android:layout_marginTop="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="סניף"
+            android:id="@+id/Branch"
+            android:layout_below="@+id/Factory"
+            android:layout_marginTop="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="ישוב"
+            android:id="@+id/City"
+            android:layout_below="@+id/Branch"
+            android:layout_marginTop="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="כתובת"
+            android:id="@+id/Adress"
+            android:layout_below="@+id/City"
+            android:layout_marginTop="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="טלפון"
+            android:id="@+id/PhoneNumber"
+            android:layout_below="@+id/Adress"
+            android:layout_marginTop="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="פקס"
+            android:id="@+id/FaxNumber"
+            android:layout_below="@+id/PhoneNumber"
+            android:layout_marginTop="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="איש קשר"
+            android:id="@+id/ContactPerson"
+            android:layout_below="@+id/FaxNumber"
+            android:layout_marginTop="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="מען למכתבים"
+            android:id="@+id/MailingAddress"
+            android:layout_below="@+id/ContactPerson"
+            android:layout_marginTop="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="מספר עובדים"
+            android:id="@+id/NumberOfEmployees"
+            android:layout_below="@+id/MailingAddress"
+            android:layout_marginTop="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="מפקח"
+            android:id="@+id/Inspector"
+            android:layout_below="@+id/NumberOfEmployees"
+            android:layout_marginTop="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/Text_AfikNumber_show"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_above="@+id/Factory"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Text_Factory_show"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_above="@+id/Branch"
+            android:layout_alignRight="@+id/Text_AfikNumber_show"
+            android:layout_alignEnd="@+id/Text_AfikNumber_show"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Text_Branch_show"
+            android:layout_alignBottom="@+id/Branch"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/Text_Factory_show"
+            android:layout_alignEnd="@+id/Text_Factory_show" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Text_City_show"
+            android:layout_alignBottom="@+id/City"
+            android:layout_alignRight="@+id/Text_Branch_show"
+            android:layout_alignEnd="@+id/Text_Branch_show"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Text_Adress_show"
+            android:layout_alignBottom="@+id/Adress"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/Text_City_show"
+            android:layout_alignEnd="@+id/Text_City_show" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/Text_PhoneNumber_show"
+            android:layout_above="@+id/FaxNumber"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/Text_FaxNumber_show"
+            android:layout_alignBottom="@+id/FaxNumber"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/Text_ContactPerson_show"
+            android:layout_above="@+id/MailingAddress"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:ems="10"
+            android:id="@+id/Text_MailingAddress_show"
+            android:layout_alignBottom="@+id/MailingAddress"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/Text_NumberOfEmployees_show"
+            android:layout_alignBottom="@+id/NumberOfEmployees"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/Text_Inspector_show"
+            android:layout_below="@+id/Text_NumberOfEmployees_show"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="  convert to pdf "
+            android:id="@+id/convertToPdf"
+            android:background="#ffcddfe8"
+            android:clickable="true"
+            android:onClick="btnConvertPDF"
+            android:layout_below="@+id/Inspector"
+            android:layout_marginTop="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="false"
+            />
+        <Button
+
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="SEND TO EMAIL"
+            android:id="@+id/sendToEmail"
+            android:background="#ffcddfe8"
+            android:clickable="true"
+            android:onClick="btnSendToEmail"
+
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/AfikNumber"
+            android:layout_toStartOf="@+id/AfikNumber" />
+
+
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
