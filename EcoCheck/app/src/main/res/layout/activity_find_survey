@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="org.ecocheck.ecocheck.FindSurvey">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ביקורים"
+        android:id="@+id/VisitTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#CCC"
+        android:paddingTop="1dp"
+        android:stretchColumns="0"
+        android:id="@+id/tlTableVisit"
+        android:layout_below="@+id/VisitTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp">
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <EditText
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+
+                android:id="@+id/editText_factoyChoice"
+
+                />
+
+            <TextView
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:text="מפעל"
+                />
+
+        </TableRow>
+
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <EditText
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:inputType="date"
+                android:id="@+id/editText_visitDate"
+
+                />
+
+            <TextView
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:text="תאריך ביקור"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <EditText
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:inputType="number"
+                android:id="@+id/editText_reportNumber"
+
+                />
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:gravity="left"
+
+                android:text="מספר דוח"/>
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <EditText
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:id="@+id/editText_sampels"
+                />
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:gravity="left"
+                android:text="דוגם"/>
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <EditText
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:inputType="number"
+                android:id="@+id/editText_laboratory"
+                />
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:gravity="left"
+                android:text="מעבדה"/>
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <CheckBox
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+
+                android:id="@+id/checkbox_confirmed"
+                />
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:gravity="left"
+                android:text="אושר"/>
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <EditText
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+
+                android:id="@+id/editText_comments"
+                />
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:gravity="left"
+                android:text="הערה"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text=" חפש סקר"
+        android:id="@+id/Button_FindVisit"
+        android:background="#ffcddfe8"
+        android:clickable="true"
+        android:layout_below="@+id/tlTableVisit"
+        android:layout_marginTop="22dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+</RelativeLayout>
