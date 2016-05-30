@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".showSurvey.showVisitSurvey">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  הצגת דוח ביקור נבחר:"
+        android:textStyle="bold"
+        android:textColor="#D50000"
+        android:textSize="20sp"
+        android:id="@+id/VisitTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#CCC"
+        android:paddingTop="1dp"
+        android:stretchColumns="0"
+        android:id="@+id/tlTableVisit"
+        android:layout_below="@+id/VisitTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp">
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <TextView
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:id="@+id/Text_factoyChoice_show"
+
+                />
+
+            <TextView
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:text="שם מפעל"
+                />
+
+        </TableRow>
+
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <TextView
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:id="@+id/Text_visitDate_show"
+
+                />
+
+            <TextView
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:text="  תאריך ביקור"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <TextView
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:id="@+id/Text_reportNumber_show"
+
+                />
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:gravity="left"
+
+                android:text=" מספר דוח"/>
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <TextView
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:id="@+id/Text_sampels_show"
+                />
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:gravity="left"
+                android:text="מבקר"/>
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <TextView
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:id="@+id/Text_laboratory_show"
+                />
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:gravity="left"
+                android:text="מעבדה"/>
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <TextView
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:id="@+id/Text_confirmed_show"
+                />
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:gravity="left"
+                android:text="אושר"/>
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <TextView
+                android:layout_marginRight="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:id="@+id/Text_comments_show"
+                />
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:gravity="left"
+                android:text="הערות"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="הצג תהליך מקושר"
+        android:id="@+id/Button_addVisit"
+        android:background="#ffcddfe8"
+        android:clickable="true"
+        android:onClick="btnShowProcess"
+        android:layout_below="@+id/tlTableVisit"
+        android:layout_marginTop="22dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#ffcddfe8"
+        android:text="הצג המלצה מקושרת "
+        android:id="@+id/Button_updateVisit"
+        android:onClick="btnShowRecommendation"
+        android:layout_alignTop="@+id/Button_addVisit"
+        android:layout_alignLeft="@+id/VisitTextView"
+        android:layout_alignStart="@+id/VisitTextView" />
+
+
+    </RelativeLayout>
