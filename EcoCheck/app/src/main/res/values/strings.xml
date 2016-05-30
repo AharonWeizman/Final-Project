@@ -1,10 +1,80 @@
 <resources>
     <string name="app_name">EcoCheck</string>
 
+
     <string name="action_settings">הגדרות</string>
     <string name="search_material">חיפוש חומר</string>
     <string name="visit_factory">ביקורים</string>
-    <string name="factory_process">factory process</string>
+    <string name="factory_process">תהליכים</string>
     <string name="factory_recommendations">המלצות</string>
+
+    <!--factory process string -->
+    <string name="lbl_report_number">מספר דוח:</string>
+    <string name="hint_report_number">מספר דוח</string>
+    <string name="lbl_process_add_line">תהליכים</string>
+    <string name="lbl_departments">מחלקות</string>
+    <string name="lbl_department">מחלקה</string>
+    <string name="lbl_assignments">מטלות</string>
+    <string name="lbl_assignment">מטלה</string>
+    <string name="lbl_no_of_employee">מספר עובדים</string>
+    <string name="lbl_processes">תהליכים</string>
+    <string name="lbl_process">תהליך</string>
+    <string name="lbl_comment_process">הערה לתהליך</string>
+    <string name="lbl_duration_process">משך תהליך</string>
+    <string name="lbl_method">שיטה</string>
+    <string name="lbl_exposure">חשיפה עורית</string>
+    <string name="lbl_recommendation_summery"> סיכום/המלצה</string>
+    <string name="lbl_recommendation">Recommendation</string>
+    <string name="lbl_cold">קר</string>
+    <string name="lbl_warm">חם/קר</string>
+    <string name="lbl_open">סגור/פתוח</string>
+    <string name="lbl_closed">פתוח</string>
+    <string name="lbl_amount">כמות</string>
+    <string name="lbl_chemical_exposure"> חשיפה לא כימית</string>
+    <string name="lbl_inhalant_exposure">   תיאור חשיפה לא נשימתית    </string>
+    <string name="lbl_personal_control">  בקרה אישית  </string>
+    <string name="lbl_control_exposure">Control Exposure</string>
+    <string name="lbl_type_process_control">  בקרת תהליך</string>
+    <string name="lbl_desc_process_control">  תיאור בקרת תהליך</string>
+    <string name="lbl_personal_protective_type">   סוג ציוד מגן אישי</string>
+    <string name="lbl_description_of_personal_control">תיאור בקרה אישית</string>
+    <string name="lbl_type_of_control_process">  סוג בקרה על תהליך</string>
+    <string name="lbl_description_of_control_process">תיאור בקרת תהליך</string>
+    <string name="lbl_new">חדש</string>
+    <string name="lbl_material_associated_task">  חומרים מקושרים למטלות</string>
+    <string name="lbl_material_trade_name">חומר/שם מסחרי </string>
+    <string name="lbl_using_metrial"> תדירות שימוש בחומר</string>
+    <string name="lbl_linked">קישור</string>
+    <string name="lbl_tiny_amount"> כמות זעירה</string>
+    <string name="lbl_msds">MSDS</string>
+    <string name="lbl_factor_monitoring_components">  מרכיבים וגורמים לניטור</string>
+    <string name="lbl_quick_choice"> בחירה מהירה</string>
+    <string name="lbl_factor"> גורם</string>
+    <string name="lbl_policy_level"> רמה מותרת</string>
+    <string name="lbl_regularity_type"> סוג תקן</string>
+    <string name="lbl_unit"> יחידה</string>
+    <string name="lbl_numOf_sample"> מספר דגימות</string>
+    <string name="lbl_ingredients"> מרכיב</string>
+    <string name="lbl_search_add"> חיפוש/הוספה</string>
+    <string name="lbl_material_component_percent"> אחוז מרכיב בחומר</string>
+    <string name="lbl_add_factory_monitoring_components">Add factory monitoring components</string>
+
+    <string name="lbl_next">קדימה</string>
+    <string name="lbl_previous">אחורה</string>
+    <string name="lbl_add_processes">הוסף תהליכים </string>
+    <string name="lbl_add_process"> הוסף תהליך</string>
+    <string name="lbl_add_department"> הוסף מחלקה</string>
+    <string name="lbl_add_assignment"> הוסף מטלה</string>
+    <string name="lbl_add_exposure"> הוסף חשיפה לא כימית</string>
+
+    <string name="msg_add_department">   הכנס בבקשה שם מחלקה</string>
+    <string name="msg_add_assignment">   הכנס בבקשה שם מטלה</string>
+    <string name="msg_add_process">   הכנס בבקשה שם תהליך</string>
+    <string name="msg_add_chemical_exposure">    הכנס בבקשה חשיפה לא כימית</string>
+    <string name="lbl_fact_monitor_component">  מרכיבים וגורמים לניטור</string>
+
+    <string name="lbl_save_data">Save</string>
+    <!--factory process string ends here-->
+
 
 </resources>
