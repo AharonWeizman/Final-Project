@@ -1,0 +1,132 @@
+package org.ecocheck.ecocheck.dto;
+
+/**
+ * Created by Ron on 26/05/2016.
+ */
+
+
+
+public class FactorsMonitoringComponent 
+{
+
+    private String mQuickChoice;
+    private String mFactor;
+    private String mPolicyLevel;
+    private String mRegularityType;
+    private String mUnit;
+    private String mNoOfSample;
+    private String mIngredients;
+    private String mSearchAdd;
+    private String mMaterialComponentPresent;
+
+    private String mProcess="";
+    private String mAssignmentName="";
+    private String mDepartment="";
+    private int mReportNo;
+
+    public String getAssignmentName() {
+        return mAssignmentName;
+    }
+
+    public void setAssignmentName(String mAssignmentName) {
+        this.mAssignmentName = mAssignmentName;
+    }
+
+    public String getDepartment() {
+        return mDepartment;
+    }
+
+    public void setDepartment(String mDepartment) {
+        this.mDepartment = mDepartment;
+    }
+
+    public int getReportNo() {
+        return mReportNo;
+    }
+
+    public void setReportNo(int mReport_no) {
+        this.mReportNo = mReport_no;
+    }
+
+    public String getProcess() {
+        return mProcess;
+    }
+
+    public void setProcess(String mProcess) {
+        this.mProcess = mProcess;
+    }
+
+    public String getmQuickChoice() {
+        return mQuickChoice;
+    }
+
+    public void setQuickChoice(String mQuickChoice) {
+        this.mQuickChoice = mQuickChoice;
+    }
+
+    public String getFactor() {
+        return mFactor;
+    }
+
+    public void setFactor(String mFactor) {
+        this.mFactor = mFactor;
+    }
+
+    public String getPolicyLevel() {
+        return mPolicyLevel;
+    }
+
+    public void setPolicyLevel(String mPolicyLevel) {
+        this.mPolicyLevel = mPolicyLevel;
+    }
+
+    public String getRegularityType() {
+        return mRegularityType;
+    }
+
+    public void setRegularityType(String mRegularityType) {
+        this.mRegularityType = mRegularityType;
+    }
+
+    public String getUnit() {
+        return mUnit;
+    }
+
+    public void setUnit(String mUnit) {
+        this.mUnit = mUnit;
+    }
+
+    public String getNoOfSample() {
+        return mNoOfSample;
+    }
+
+    public void setNoOfSample(String mNoOfSample) {
+        this.mNoOfSample = mNoOfSample;
+    }
+
+    public String getIngredients() {
+        return mIngredients;
+    }
+
+    public void setIngredients(String mIngredients) {
+        this.mIngredients = mIngredients;
+    }
+
+    public String getSearchAdd() {
+        return mSearchAdd;
+    }
+
+    public void setSearchAdd(String mSearchAdd) {
+        this.mSearchAdd = mSearchAdd;
+    }
+
+    public String getMaterialComponentPresent() {
+        return mMaterialComponentPresent;
+    }
+
+    public void setMaterialComponentPresent(String mMaterialComponentPresent) {
+        this.mMaterialComponentPresent = mMaterialComponentPresent;
+    }
+
+}
+
