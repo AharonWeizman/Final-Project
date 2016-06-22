@@ -9,13 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ShowFactory.showFactory"
     android:fillViewport="false">
-    <!--
-   moved
-   android:paddingLeft="@dimen/activity_horizontal_margin"
-   android:paddingRight="@dimen/activity_horizontal_margin"
-   from scrollview to relativelayout so when creating the pdf it will
-   have same margins as the view
-   -->
+   
     <RelativeLayout
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
