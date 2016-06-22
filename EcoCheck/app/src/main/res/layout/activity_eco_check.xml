@@ -6,6 +6,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".EcoCheckActivity"
     android:background="#B0BEC5"
+
     >
   <RelativeLayout
       android:layout_width="match_parent"
@@ -22,8 +23,8 @@
         android:textColor="#D50000" />
     <!-- button of create new factory -->
     <Button
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="מפעל חדש"
         android:id="@+id/NewFactory"
         android:layout_below="@+id/PreliminarySurvey"
@@ -35,8 +36,8 @@
 
     <!-- button to find factory -->
     <Button
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="חפש מפעל"
         android:id="@+id/findFactory"
         android:background="#ffcddfe8"
@@ -48,8 +49,8 @@
 
     <!--button to find Survey -->
     <Button
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="חפש סקר"
         android:id="@+id/findSurvey"
         android:background="#ffcddfe8"
@@ -61,9 +62,9 @@
 
     <!--button of the list reports -->
     <Button
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:text="רשימת דוחות"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="רשימת סקרים"
         android:id="@+id/ListReports"
         android:background="#ffcddfe8"
         android:clickable="true"
@@ -74,12 +75,13 @@
 
     <!-- tools button -->
     <Button
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:text="כלים"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="חומרים"
         android:id="@+id/tools"
         android:background="#ffcddfe8"
         android:clickable="true"
+        android:onClick="openMaterials"
         android:layout_below="@+id/ListReports"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -87,10 +89,10 @@
 
     <!--Afik button -->
     <Button
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:text="אפיק"
-        android:id="@+id/afik"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="כל המפעלים"
+        android:id="@+id/AllTheFactory"
         android:background="#ffcddfe8"
         android:clickable="true"
         android:layout_below="@+id/tools"
@@ -98,29 +100,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="10dp" />
 
-    <!--Survey to send button -->
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:text="סקרים לשליחה"
-        android:id="@+id/surveyToSend"
-        android:background="#ffcddfe8"
-        android:clickable="true"
-        android:layout_below="@+id/afik"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp" />
 
-    <!-- setting button -->
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:text="הגדרות"
-        android:id="@+id/setting"
-        android:layout_alignBottom="@+id/NewFactory"
-        android:background="#ffcddfe8"
-        android:clickable="true"
-        android:layout_toLeftOf="@+id/PreliminarySurvey"
-        android:layout_toStartOf="@+id/PreliminarySurvey" />>
+      >
   </RelativeLayout>
 </ScrollView>
